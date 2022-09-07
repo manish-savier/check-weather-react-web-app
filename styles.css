@@ -1,0 +1,147 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.background::before {
+    content: '';
+    background: url(images/weather-bg.jpg) 
+                no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.main-div{
+    padding: 0 20px;
+}
+
+.flex-div {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex-div h2 {
+    color: white;
+    margin-top: 60px;
+}
+
+.search-container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.search {
+    display: flex;
+    margin-top: 60px;
+    padding: 10px 20px; 
+    background-color: rgba(256, 256, 256, 0.8);
+    border-radius: 50px;
+    border: 1px solid rgba(256, 256, 256, 0.5);
+    width: 100%;
+    justify-content: space-between;
+}
+
+.search input {
+    font-size: 18px;
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+.search img {
+    width: 24px;
+    padding: 8px;
+    opacity: 0.4;
+}
+
+.search img:hover, .search img:focus {
+    opacity: 0.6;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+h1 {
+    font-size: 80px;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+}
+
+.temp-main-div {
+    text-align: center;
+}
+
+.temp-div {
+    display: flex;
+    margin-top: 30px;
+    color: white;
+    gap: 10px;
+}
+
+.temp-div-item {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.temp-div-item span {
+    font-size: 32px;
+}
+
+.temp-image-div {
+    background-color: orange;
+    border-radius: 50%;
+    align-self: center;
+    width: 60px;
+    height: 60px;
+}
+
+.temp-image-div img {
+    height: inherit;
+
+}
+
+.temp-main-div p {
+    display: inline-block;
+    font-size: 18px;
+    padding: 12px 24px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    opacity: 0.8;
+}
+
+.error {
+    color: orange;
+}
+
+@media screen and (max-width: 400px){
+    h1 {
+        font-size: 56px;
+    }
+    .temp-image-div {
+        width: 48px;
+        height: 48px;
+    }
+}
